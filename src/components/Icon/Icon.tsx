@@ -88,6 +88,7 @@ import {
   faSpinner,
   faArrowLeft,
   faRotateLeft,
+  faPuzzlePiece,
 } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -231,7 +232,8 @@ export type IconName =
   | 'spinner'
   | 'arrow-left'
   | 'rotate-left'
-  | 'gamepad';
+  | 'gamepad'
+  | 'puzzle-piece';
 
 interface IconProps {
   name: IconName;
@@ -343,6 +345,7 @@ const faIconMap = {
   'spinner': faSpinner,
   'arrow-left': faArrowLeft,
   'rotate-left': faRotateLeft,
+  'puzzle-piece': faPuzzlePiece,
 } as const;
 
 export function Icon({ name, size = 24, className = '', variant = 'solid', style }: IconProps) {

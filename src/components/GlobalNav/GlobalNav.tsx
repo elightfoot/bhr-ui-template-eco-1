@@ -9,7 +9,7 @@ const NAV_STORAGE_KEY = 'bhr-nav-expanded';
 interface NavItem {
   path: string;
   label: string;
-  icon: 'home' | 'circle-user' | 'user-group' | 'id-badge' | 'chart-pie-simple' | 'file-lines' | 'circle-dollar';
+  icon: 'home' | 'circle-user' | 'user-group' | 'id-badge' | 'chart-pie-simple' | 'file-lines' | 'circle-dollar' | 'puzzle-piece';
 }
 
 const navItems: NavItem[] = [
@@ -19,6 +19,7 @@ const navItems: NavItem[] = [
   { path: '/hiring', label: 'Hiring', icon: 'id-badge' },
   { path: '/reports', label: 'Reports', icon: 'chart-pie-simple' },
   { path: '/files', label: 'Files', icon: 'file-lines' },
+  { path: '/ecosystem', label: 'Ecosystem', icon: 'puzzle-piece' },
   { path: '/payroll', label: 'Payroll', icon: 'circle-dollar' },
 ];
 
