@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import type { Components } from 'react-markdown';
@@ -78,16 +77,18 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ text }) => {
     ),
 
     // Code
-    code: ({ inline, children, className }) => {
-      if (inline) {
+    code: ({ children, className }) => {
+      const content = String(children).replace(/\n$/, '');
+      const isBlock = Boolean(className) || content.includes('\n');
+
+      if (!isBlock) {
         return (
           <code className="px-1.5 py-0.5 rounded bg-[var(--surface-neutral-xx-weak)] border border-[var(--border-neutral-strong)] font-mono text-sm text-[var(--text-neutral-xx-strong)]">
             {children}
           </code>
         );
       }
-      // Block code
-      const language = className?.replace('language-', '') || '';
+
       return (
         <pre className="my-3 p-3 rounded bg-[var(--surface-neutral-xx-weak)] border border-[var(--border-neutral-strong)] overflow-x-auto">
           <code className={`font-mono text-sm text-[var(--text-neutral-xx-strong)] ${className || ''}`}>

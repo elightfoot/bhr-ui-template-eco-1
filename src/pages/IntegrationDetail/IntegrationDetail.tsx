@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { listings, bundles, getBundlesForPartner } from '../../data/listings';
+import { listings, bundles } from '../../data/listings';
 
 // Benefit icons (simple SVG paths keyed by index)
 const benefitIcons = [
@@ -60,7 +60,6 @@ export function IntegrationDetail() {
     );
   }
 
-  const partnerBundles = getBundlesForPartner(listing.id);
   const hasDiscount =
     listing.metadata.discountPackaging && listing.metadata.discountPackaging !== 'None';
 

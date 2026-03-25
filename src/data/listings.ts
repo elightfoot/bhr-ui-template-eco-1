@@ -535,7 +535,7 @@ export const listings: Listing[] = [
           'Automate actions in other apps when BambooHR data changes, or update BambooHR automatically when events happen in connected apps.',
       },
     ],
-    dataSyncNote: null,
+    dataSyncNote: undefined,
     dataSync: null,
     dataSyncFreeText:
       'Zapier is a platform connector — it does not sync a fixed set of fields. Instead, you configure triggers and actions based on your specific workflows. Available BambooHR triggers include new employee created, time-off request created, and company report changes. This integration uses event-based triggers rather than field-level sync.',
