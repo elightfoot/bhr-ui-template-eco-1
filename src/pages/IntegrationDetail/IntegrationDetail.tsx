@@ -117,20 +117,15 @@ export function IntegrationDetail() {
                     />
                   </div>
                   <div className="min-w-0">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="rounded-[6px] bg-[var(--surface-neutral-x-weak)] px-2.5 py-1 text-[12px] font-medium text-[var(--text-neutral-medium)]">
-                        {listing.category}
-                      </span>
-                      <span className="rounded-[6px] border border-[var(--border-neutral-medium)] px-2.5 py-1 text-[12px] font-medium text-[var(--text-neutral-medium)]">
-                        {listing.metadata.publisher}
-                      </span>
-                    </div>
                     <h1
-                      className="mt-2 text-[36px] font-semibold leading-[44px] text-[var(--color-primary-strong)]"
+                      className="text-[36px] font-semibold leading-[44px] text-[var(--color-primary-strong)]"
                       style={{ fontFamily: 'Fields, system-ui, sans-serif' }}
                     >
                       {listing.name}
                     </h1>
+                    <p className="mt-1 text-[13px] font-medium uppercase tracking-[0.06em] text-[var(--text-neutral-medium)]">
+                      {listing.category}
+                    </p>
                     <p className="mt-2 max-w-xl text-[15px] leading-6 text-[var(--text-neutral-x-strong)]">
                       {listing.previewDescription}
                     </p>
