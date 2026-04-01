@@ -3,11 +3,13 @@ import AppLayout from './layouts/AppLayout';
 import { Home, MyInfo, People, Hiring, Reports, Files, Payroll, Ecosystem, Settings, Inbox, NewEmployeePage, DatePickerDemo, CreateJobOpening, JobAIPrototype, Doom } from './pages';
 import { JobOpeningDetail } from './pages/JobOpeningDetail';
 import { IntegrationDetail } from './pages/IntegrationDetail';
+import { IntegrationManage } from './pages/IntegrationManage';
 import { Chat } from './pages/Chat';
 import { ChatTransitionsDemo } from './pages/ChatTransitionsDemo';
 import { TextReflowDemo } from './pages/TextReflowDemo';
 import { TextReflowDemo2 } from './pages/TextReflowDemo2';
 import { ChatProvider } from './contexts/ChatContext';
+import { EcosystemProvider } from './contexts/EcosystemContext';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
           <Route
             path="/*"
             element={
+              <EcosystemProvider>
               <AppLayout>
                 <Routes>
                   <Route path="/" element={<Home />} />
@@ -42,12 +45,14 @@ function App() {
                   <Route path="/files" element={<Files />} />
                   <Route path="/ecosystem" element={<Ecosystem />} />
                   <Route path="/ecosystem/apps/:id" element={<IntegrationDetail />} />
+                  <Route path="/ecosystem/apps/:id/manage" element={<IntegrationManage />} />
                   <Route path="/payroll" element={<Payroll />} />
                   <Route path="/inbox" element={<Inbox />} />
                   <Route path="/settings" element={<Settings />} />
                   <Route path="/doom" element={<Doom />} />
                 </Routes>
               </AppLayout>
+              </EcosystemProvider>
             }
           />
         </Routes>

@@ -133,6 +133,89 @@ export const listings: Listing[] = [
     },
   },
   {
+    id: 'awardco',
+    name: 'Awardco',
+    category: 'Recognition & Rewards',
+    logoInitials: 'AW',
+    logoSrc: '/logos/awardco.png',
+    accentClass: 'bg-[#F3F4F6] text-[#111827]',
+    previewDescription:
+      'Automate employee data sync and milestone recognition, without manual data entry.',
+    overview:
+      'Awardco is an employee recognition and rewards platform that connects to BambooHR to automatically sync employee data and power recognition programs. Once connected, hires, terminations, role changes, and milestones from BambooHR flow into Awardco weekly — no manual data entry required.',
+    benefits: [
+      {
+        title: 'Seamless data sync',
+        description:
+          'Employee hires, terminations, and role changes sync automatically from BambooHR to Awardco, keeping your recognition programs accurate without manual updates.',
+      },
+      {
+        title: 'Automated employee milestones',
+        description:
+          'Work anniversaries and key milestones trigger recognition automatically using hire date and employment data from BambooHR — no spreadsheet tracking needed.',
+      },
+      {
+        title: 'Reduced manual work',
+        description:
+          'Eliminate duplicate data entry between systems — employee records, departments, roles, and permissions in Awardco stay current from a single source of truth.',
+      },
+      {
+        title: 'Accurate reward distribution',
+        description:
+          'Rewards and incentives are allocated using up-to-date department, location, and role data from BambooHR, reducing errors in budget assignment.',
+      },
+    ],
+    dataSyncNote:
+      'All fields sync one-way from BambooHR to Awardco on a weekly schedule. Employee ID is the identifying field — it must match between both systems.',
+    dataSync: [
+      { bhrField: 'Employee ID', direction: '→', partnerField: 'Employee ID', status: 'Default' },
+      { bhrField: 'First Name', direction: '→', partnerField: 'First Name', status: 'Default' },
+      { bhrField: 'Last Name', direction: '→', partnerField: 'Last Name', status: 'Default' },
+      { bhrField: 'Work Email', direction: '→', partnerField: 'Email', status: 'Default' },
+      { bhrField: 'Personal Email', direction: '→', partnerField: 'Secondary Email', status: 'Default' },
+      { bhrField: 'Phone Number', direction: '→', partnerField: 'Phone Number', status: 'Optional' },
+      { bhrField: 'Birth Date', direction: '→', partnerField: 'Birth Date', status: 'Optional' },
+      { bhrField: 'Hire Date', direction: '→', partnerField: 'Hire Date', status: 'Default' },
+      { bhrField: 'Country Code', direction: '→', partnerField: 'Leave Date', status: 'Default' },
+      { bhrField: 'Job Title', direction: '→', partnerField: 'Job Title', status: 'Default' },
+      { bhrField: 'Department', direction: '→', partnerField: 'Department', status: 'Default' },
+      { bhrField: 'Employment Type', direction: '→', partnerField: 'Employment Type', status: 'Default' },
+      { bhrField: 'Employment Subtype', direction: '→', partnerField: 'Employment Subtype', status: 'Default' },
+      { bhrField: 'IsManager', direction: '→', partnerField: 'IsManager', status: 'Default' },
+      { bhrField: 'Residence State', direction: '→', partnerField: 'Residence State', status: 'Default' },
+      { bhrField: 'Residence City', direction: '→', partnerField: 'Residence City', status: 'Default' },
+      { bhrField: 'Custom Fields', direction: '→', partnerField: 'Custom Fields', status: 'Default' },
+      { bhrField: 'BambooHR Supervisor ID', direction: '→', partnerField: 'Supervisor ID', status: 'Default' },
+    ],
+    setupNote:
+      'Estimated time: 10 minutes. Requires Awardco admin credentials. No IT involvement needed.',
+    setupSteps: [
+      'Log into Awardco as an admin and navigate to Settings → Integrations.',
+      'Search for BambooHR in the Integrations Library and click Setup BambooHR.',
+      'Review and agree to the terms of service and the permissions Awardco requests.',
+      'Enter your BambooHR subdomain, email address, and password, then click Connect.',
+      'Confirm the success message and finalize settings — the first sync runs within 24 hours.',
+    ],
+    support: {
+      publisher: 'Awardco',
+      hours: '24/7 chat, email, and phone',
+      phone: '1-800-320-0893',
+      email: 'support@awardco.com',
+    },
+    metadata: {
+      title: 'Awardco — BambooHR Marketplace',
+      category: 'Recognition & Rewards',
+      integrationType: 'One-way via API',
+      direction: 'BambooHR to Partner App',
+      syncTrigger: 'Scheduled',
+      syncFrequency: 'Weekly',
+      publisher: 'Awardco',
+      businessSize: 'All sizes',
+      publicationDate: '2025-02-11',
+      discountPackaging: 'Integration free to BambooHR customers',
+    },
+  },
+  {
     id: 'breezyhr',
     name: 'BreezyHR',
     category: 'Applicant Tracking Systems',
